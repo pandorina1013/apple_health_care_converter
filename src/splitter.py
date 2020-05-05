@@ -31,7 +31,7 @@ class Splitter():
         print("body mass <- done.")
 
     def get_burned_energy(self):
-        df = self.xml_to_csv("HKQuantityTypeIdentifierBasalEnergyBurned")
+        df = self.xml_to_csv("HKQuantityTypeIdentifierActiveEnergyBurned")
         df = df.groupby('datetime').sum()
         df.to_csv("output/burned_energy.csv")
         print("burned energy <- done.")
